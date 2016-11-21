@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MVC121.Areas.Administrator.Models.NewsLetter>
+
+@{
+    ViewBag.Title = "مدیریت خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2 style="font-family:IranNastaliq;font-size:xx-large">مدیریت خبرنامه</h2>
+
+<p style="font-family:IranNastaliq;font-size:xx-large">
+    @Html.ActionLink("ایجاد خبرنامه جدید", "Create")
+</p>
+<table class="table">
+    <tr style="font-family:IranNastaliq;font-size:xx-large">
+        <th>
+            @Html.DisplayNameFor(model => model.NewsLetterCategory.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Writer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishTime)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ISSend)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr >
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsLetterCategory.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Writer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishTime)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.ISSend)
+        </td>
+        <td>
+            @Html.ActionLink("ارسال خبرنامه", "Details", new { id = item.ID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.ID }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.ID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

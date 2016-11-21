@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVC121.Areas.Administrator.Models.PostCategory>
+
+@{
+    ViewBag.Title = "دسته بندی مطالب";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+<img src="~/Areas/Administrator/img/category_s.png" alt="category" />
+
+<h2>دسته بندی مطالب</h2>
+<p>
+    @Html.ActionLink("ایجاد دسته بندی جدید", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.ActionLink("جزئیات", "Details", new { id = item.ID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("ویرایش", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

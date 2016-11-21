@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVC121.Models.Personel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<tbody id="divSearchAjax">
+    @Html.Action("_Search",new {keyword="" })
+</tbody>
+
+@using (Ajax.BeginForm("_Search", new AjaxOptions { UpdateTargetId = "divSearchAjax", LoadingElementId = "divLoading", InsertionMode = InsertionMode.Replace }))
+{
+   <div id="divLoading"></div>
+
+   <div>
+       @Html.TextBox("keyword")
+       <button type="submit" >جستجو</button>
+   </div>
+}
+

@@ -1,0 +1,19 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "خطای دسترسی!";
+}
+<div style="direction:rtl;color:red">
+    <h1 class="text-danger">خطای دسترسی!</h1>
+    <h3>کاربر محترم : @ViewBag.User</h3>
+    <h3 class="text-danger">شما برای دسترسی به فایل درخواست شده مجوز های لازم را ندارید </h3>
+    <h3>شناسه کاربری شما : @ViewBag.ID</h3>
+    <h3>این فایل فروشی است؟ : @ViewBag.IsPaymentUser</h3>
+    <h3>نیاز به عضویت ویژه دارد؟ : @ViewBag.IsVIP</h3>
+    <h4> توضیح : شما نیاز به داشتن مجوزی که برابر با true میباشد دارید! </h4>
+</div>
+
+@Html.ActionLink("بازگشت","Index")
+
+
+

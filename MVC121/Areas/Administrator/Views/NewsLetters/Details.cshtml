@@ -1,0 +1,66 @@
+﻿@model MVC121.Areas.Administrator.Models.NewsLetter
+
+@{
+    ViewBag.Title = "جزئیات خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2 style="font-family:IranNastaliq;font-size:xx-large">جزئیات </h2>
+
+<div>
+    <h4 style="font-family:IranNastaliq;font-size:xx-large">خبرنامه</h4>
+    <hr />
+    <dl class="dl-horizontal" style="font-family:IranNastaliq;font-size:xx-large">
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetterCategory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetterCategory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Writer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Writer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullBody)
+        </dt>
+
+        @{string strFullBody = Model.FullBody; }
+        <dd style="font-family:IranNastaliq;font-size:xx-large">
+            <textarea> @HtmlRemoval.UnHtml(strFullBody)</textarea>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishTime)
+        </dt>
+
+        <dd style="font-family:'B Yekan';font-size:medium ">
+            @Html.DisplayFor(model => model.PublishTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ارسال خبرنامه", "Send", new { id = Model.ID },htmlAttributes: new { @class = "btn btn-primary" }) |
+
+    @Html.ActionLink("ویرایش خبرنامه", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("بازگشت", "Index")
+</p>

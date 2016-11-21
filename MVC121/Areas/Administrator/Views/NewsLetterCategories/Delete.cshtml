@@ -1,0 +1,38 @@
+﻿@model MVC121.Areas.Administrator.Models.NewsLetterCategory
+
+@{
+    ViewBag.Title = "حذف دسته بندی خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2>حذف دسته بندی خبرنامه</h2>
+<h4>@Model.Name</h4>
+
+<h3>آیا از حذف این مطلب اطمینان دارید ؟</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("بازگشت", "Index")
+        </div>
+    }
+</div>

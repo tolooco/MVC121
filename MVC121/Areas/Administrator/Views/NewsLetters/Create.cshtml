@@ -1,0 +1,131 @@
+﻿@model MVC121.Areas.Administrator.Models.NewsLetter
+
+@{
+    ViewBag.Title = "ایجاد خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <link href="~/Scripts/TagsInput/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/Theme/redmond/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2>ایجاد </h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4> خبرنامه</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewsLetterCategoryID, "دسته بندی خبرنامه", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("NewsLetterCategoryID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NewsLetterCategoryID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Writer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Writer, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Writer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FullBody, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.FullBody, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FullBody, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PublishTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PublishTime, new { htmlAttributes = new { @class = "form-control", ID = "txtDate" } })
+                @Html.ValidationMessageFor(model => model.PublishTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ایجاد خبرنامه" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("بازگشت", "Index")
+</div>
+
+@section scripts{
+    <script src="~/Scripts/TagsInput/bootstrap-tagsinput.min.js"></script>
+    <script>
+        $(function () {
+            $("#Keyword").keypress(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                }
+            }).tagsinput();
+        });
+
+    </script>
+
+    <script src="~/Scripts/tinymce/tiny_mce.js" type="text/javascript"></script>
+
+    <script src="~/Scripts/tinymce/tinymce.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea",
+            theme: "modern",
+            plugins: [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table contextmenu directionality ",
+            ],
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image |print preview media | forecolor backcolor emoticons ",
+            toolbar2: "",
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            language: "fa_IR",
+
+        });
+    </script>
+
+    <script src="~/Scripts/jquery-ui-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#txtDate").datetimepicker({
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
+}
+
+

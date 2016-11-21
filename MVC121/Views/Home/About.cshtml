@@ -1,0 +1,1007 @@
+﻿@model MVC121.Areas.Administrator.ViewModels.AdminNewsViewModels
+@{
+    ViewBag.Title = "درباره ما";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>درباره ما</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="TOLOOCO.com - change">
+    <meta name="keywords" content="Creative,Personal,Responsive,Template">
+    <meta name="robots" content="all">
+    <!--    dont change the order of stylesheet.css it should be on top of all CSS files.  -->
+    <link rel="stylesheet" href="~/css/stylesheet01.css">
+
+    <link rel="alternate stylesheet" type="text/css" title="02" href="~/css/stylesheet02.css" />
+    <link rel="alternate stylesheet" type="text/css" title="03" href="~/css/stylesheet03.css" />
+    <link rel="alternate stylesheet" type="text/css" title="04" href="~/css/stylesheet04.css" />
+    <link rel="alternate stylesheet" type="text/css" title="05" href="~/css/stylesheet05.css" />
+    <link rel="alternate stylesheet" type="text/css" title="06" href="~/css/stylesheet06.css" />
+    <link rel="alternate stylesheet" type="text/css" title="07" href="~/css/stylesheet07.css" />
+    <link rel="alternate stylesheet" type="text/css" title="08" href="~/css/stylesheet08.css" />
+    <link rel="alternate stylesheet" type="text/css" title="09" href="~/css/stylesheet09.css" />
+    <link rel="alternate stylesheet" type="text/css" title="10" href="~/css/stylesheet10.css" />
+    <link rel="alternate stylesheet" type="text/css" title="11" href="~/css/stylesheet11.css" />
+    <link rel="alternate stylesheet" type="text/css" title="12" href="~/css/stylesheet12.css" />
+
+    <link rel="stylesheet" href="~/css/switcher.css">
+    <script src="~/js/styleswitch.js" type="text/javascript">
+        /***********************************************
+         * Style Sheet Switcher v1.1- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+         * This notice MUST stay intact for legal use
+         * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+         ***********************************************/
+    </script>
+
+    <!--    dont change the order of stylesheet.css it should be on top of all CSS files.  -->
+
+    <link data-noprefix href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/fonts-fa.css">
+    <link rel="stylesheet" href="~/css/prettyPhoto.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/flaticon/flaticon.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.theme.css">
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="~/js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="~/js/pace.min.js"></script>
+</head>
+<body>
+    <section id="StyleSwitcher" class="">
+        <a href="javascript:void(0)" class="switcher-btn"><i class="fa fa-gear fa-spin"></i></a>
+        <div class="switcher-colors">
+            <a href="javascript:void(0)" title="none" class="color-switch color-1"></a>
+            <a href="javascript:void(0)" title="02" class="color-switch color-2"></a>
+            <a href="javascript:void(0)" title="03" class="color-switch color-3"></a>
+            <a href="javascript:void(0)" title="04" class="color-switch color-4"></a>
+            <a href="javascript:void(0)" title="05" class="color-switch color-5"></a>
+            <a href="javascript:void(0)" title="06" class="color-switch color-6"></a>
+            <a href="javascript:void(0)" title="07" class="color-switch color-7"></a>
+            <a href="javascript:void(0)" title="08" class="color-switch color-8"></a>
+            <a href="javascript:void(0)" title="09" class="color-switch color-9"></a>
+            <a href="javascript:void(0)" title="10" class="color-switch color-10"></a>
+
+            <a href="javascript:void(0)" title="11" class="color-switch color-11"></a>
+            <a href="javascript:void(0)" title="12" class="color-switch color-12"></a>
+
+        </div>
+
+    </section>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+        <noscript>جهت مشاهده کامل قابلیت های قالب، جاوا اسکریپت را فعال کنید!</noscript>
+    </div>
+    <div class="wrapper">
+        <!--      bottom lines in the bg  -->
+        <div class="background-lines">
+            <div class="line-thick "></div>
+            <div class="line-thin "></div>
+        </div>
+        <!--      END OF bottom lines in the bg -->
+        <div class="container">
+            <!--      Header, menu and logo  -->
+            <header>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 pull-right">
+                        <div class="logo  le-animate play-on-start" data-animation-in="bounceDownIn" data-delay="100">
+
+                            <img class="svg" alt="" src="~/images/rectangles.svg" />
+                            www.TOLOOCO.com
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 no-margin pull-left">
+                        <nav>
+                            <ul class="nav nav-menu  le-animate play-on-start" data-animation-in="bounceDownIn" data-delay="200">
+                                <li class="active">
+                                    <a href="#home">
+                                        <img class="svg" alt="" src="~/images/rectangles.svg" />
+                                        خانه
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#resume">
+                                        <img class="svg" alt="" src="~/images/rectangles.svg" />
+                                        رزومه
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#skills">
+                                        <img class="svg" alt="" src="~/images/rectangles.svg" />
+                                        مهارت ها
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#portfolio">
+                                        <img class="svg" alt="" src="~/images/rectangles.svg" />
+                                        مقالات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#contact">
+                                        <img class="svg" alt="" src="~/images/rectangles.svg" />
+                                        @Model.NewsViewModel.NewsLetter.Writer ارتباط با من
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!--      END OF Header, menu and logo  -->
+            <!--      The Main avatar  -->
+            <div id="avatar" class="avatar le-animate" data-animation-in="bounceUpIn" data-delay="1000">
+                <img alt="avatar" src="~/images/avatar.png" />
+            </div>
+            <!--      END OF The Main avatar -->
+            <!--    Home Section  -->
+            <section id="home" class="le-page show-avatar">
+                <div id="circles" class="avatar le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceDownOut" data-delay="5000"></div>
+
+                <div class="container">
+                    <div class="col-xs-12 col-md-5 col-md-push-1 pull-right">
+                        <div id="home-left" class="left-box">
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="1000">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="2200"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Licence1</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="1300">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="2500"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Licence2</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="1600">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="2800"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Licence3</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="1900">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="3100"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Prof1</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="2200">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="3400"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Prof2</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="2500">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="3700"></span>
+                                <span class="bold">@Model.AdminViewModel.Admin.Prof3</span>
+                            </div>
+                            <div class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="2800">
+                                <span class="big-arrow le-animate" data-animation-in="bounceRightIn" data-delay="4000"></span>
+                                <span class="bold">مشاوره و راه اندازی سیستم</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-5 pull-left">
+                        <div id="home-right" class="right-box">
+                            <div class="text-holder">
+                                <span class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="3000">Tolooco.com</span>
+                                <span class="txt-huge le-animate " data-animation-in="expandIn" data-delay="3200">تمامی</span>
+                                <span class="txt-big le-animate " data-animation-in="slideRightIn" data-delay="3400">
+                                    مقاله های شمادر @Model.NewsViewModel.NewsLetter.NewsLetterCategory.Name
+                                    <br>
+                                    <a class="page-turner le-btn" href="#contact">با من تماس بگیرید @Model.NewsViewModel.NewsLetter.Writer</a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--    END OF Home Section  -->
+            <!--    Resume Section  -->
+            <section id="resume" class="le-page show-avatar">
+                <div id="suit" class="avatar le-animate" data-animation-in="bounceDownIn" data-animation-out="bounceUpOut" data-delay="1000">
+                    <img alt="avatar" src="~/images/suit.png" />
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <div class="left-box le-animate" data-animation-in="bounceLeftIn" data-animation-out="bounceLeftOut" data-delay="2000">
+                        <div class="le-title">
+                            <h1>سوابق</h1>
+                            <span class="short-tags">
+                                <span class="short-tag-medium">شرکت هایی</span>
+                                <span class="short-tag-small">که در آنها فعالیت داشته ام</span>
+                            </span>
+                        </div>
+                        <div class="timeline-holder left">
+                            <div class="timeline-bar"></div>
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-glass"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h2>شرکت آپادانا</h2>
+                                            <p>
+                                                برنامه نویس وب سایت و طراح قالب، تحلیلگر سیستم های تحت وب
+
+                                            </p>
+                                            <div class="seperator-line"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-medium">تابستان</span>
+                                                <span class="info-big">1393</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-group"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h2>شرکت پاسارگاد</h2>
+                                            <p>
+                                                برنامه نویس وب سایت و طراح قالب، تحلیلگر سیستم های تحت وب
+
+                                            </p>
+                                            <div class="seperator-line"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-medium">بهار</span>
+                                                <span class="info-big">1393</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-briefcase"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h2>شرکت ایده پرداز</h2>
+                                            <p>
+                                                برنامه نویس وب سایت و طراح قالب، تحلیلگر سیستم های تحت وب
+
+                                            </p>
+                                            <div class="seperator-line"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-medium">زمستان</span>
+                                                <span class="info-big">1392</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-dollar"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h2>شرکت پویان افزار</h2>
+                                            <p>
+                                                برنامه نویس وب سایت و طراح قالب، تحلیلگر سیستم های تحت وب
+
+                                            </p>
+                                            <div class="seperator-line"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-medium">پاییز</span>
+                                                <span class="info-big">1392</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-coffee"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">
+                                            <h2>شرکت طراحان وب</h2>
+                                            <p>
+                                                برنامه نویس وب سایت و طراح قالب، تحلیلگر سیستم های تحت وب
+
+                                            </p>
+                                            <div class="seperator-line"></div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-medium">تابستان</span>
+                                                <span class="info-big">1391</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 col-md-offset-2">
+                    <div class="right-box le-animate" data-animation-in="bounceRightIn" data-animation-out="bounceRightOut" data-delay="1500">
+                        <div class="le-title right">
+                            <span class="short-tags">
+                                <span class="short-tag-medium">مدارک</span>
+                                <span class="short-tag-small">مختلفی که در مدت فعالیت کسب کرده ام</span>
+                            </span>
+                            <h1>تحصیلات</h1>
+                        </div>
+                        <div class="timeline-holder right">
+                            <div class="timeline-bar"></div>
+                            <div class="nice-scroll" data-scroll-align="left">
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-university"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-big">1390</span>
+                                                <span class="info-medium">
+                                                    طراحی و پیاده سازی پایگاه داده ها
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="seperator-line"></div>
+                                            <h2>مجتمع سماتک تهران</h2>
+                                            <p>
+                                                دوره های ASP.NET Webform_MVC
+                                                دوره های C#, SqlServer
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-university"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-big">1389</span>
+                                                <span class="info-medium">
+                                                    برنامه نویسی وب سایت
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="seperator-line"></div>
+                                            <h2>مجتمع فنی تهران</h2>
+                                            <p>
+                                                دوره فشرده برنامه نویسی نرم افزارهای تحت وب به زبان HTML,Css,JS.Jquery
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-university"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-big">1388</span>
+                                                <span class="info-medium">
+                                                    کارشناسی نرم افزار
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="seperator-line"></div>
+                                            <h2>دانشگاه پیام نور البرز </h2>
+                                            <p>
+                                                کارشناسی نرم افزار و آشنایی با اصول برنامه نویسی و زبان های مختلف برنامه نویسی تحت ویندوز و وب
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-university"></i>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="info-box">
+                                                <span class="info-big">1384</span>
+                                                <span class="info-medium">
+                                                    کارشناس سخت افزار و شبکه
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="seperator-line"></div>
+                                            <h2>دانشگاه تهران</h2>
+                                            <p>
+                                                کارشناس سخت افزار و شبکه و آشنایی با اصول برنامه نویسی و زبان های مختلف برنامه نویسی تحت ویندوز و وب
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--    END OF Resume Section  -->
+            <!--    Skills Section  -->
+            <section id="skills" class="le-page show-avatar">
+                <div id="skills-hat" class="avatar le-animate" data-animation-in="bounceDownIn" data-animation-out="bounceUpOut" data-delay="1000">
+                    <img alt="hat" src="~/images/worker-hat.png" />
+                </div>
+                <div class="container">
+                    <div class="col-xs-12 col-md-5">
+                        <div class="left-box le-animate" data-animation-in="bounceLeftIn" data-animation-out="bounceLeftOut" data-delay="2000">
+                            <div class="le-title">
+                                <h1>مهارت ها</h1>
+                                <span class="short-tags">
+                                    <span class="short-tag-medium">متخصص</span>
+                                    <span class="short-tag-small">در زمینه های کاری زیر</span>
+                                </span>
+                            </div>
+                            <div class="le-box left skills-box le-animate" data-animation-in="bounceLeftIn" data-delay="2300">
+                                <div class="skill-row row no-margin">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2500">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-domain1"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="4"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Licence1</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2700">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-website8"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="2"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Licence2</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2900">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-seo1"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="3"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Licence3</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-row row no-margin">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3100">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-css1"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="4"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Prof1</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3300">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-html3"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="5"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Prof2</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3500">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-striped7"></i>
+                                            </div>
+                                            <div class="skill-meter" data-value="2"></div>
+                                            <h3>@Model.AdminViewModel.Admin.Prof3</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-5 col-md-offset-2">
+                        <div class="right-box le-animate" data-animation-in="bounceRightIn" data-animation-out="bounceRightOut" data-delay="1500">
+                            <div class="le-title right">
+                                <span class="short-tags">
+                                    <span class="short-tag-medium">فعالیت های من</span>
+                                    <span class="short-tag-small">در وقت های آزاد و اوقات فراغت</span>
+                                </span>
+                                <h1>اوقات فراغت</h1>
+                            </div>
+                            <div class="le-box right skills-box le-animate" data-animation-in="bounceRightIn" data-delay="1700">
+                                <div class="skill-row row no-margin">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2400">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-guitar1"></i>
+                                            </div>
+                                            <h3>@Model.AdminViewModel.Admin.Fav1</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2600">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-swimmer8"></i>
+                                            </div>
+                                            <h3>@Model.AdminViewModel.Admin.Fav2</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="2800">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-person128"></i>
+                                            </div>
+                                            <h3>@Model.AdminViewModel.Admin.Fav3</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-row row no-margin">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3000">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-dog65"></i>
+                                            </div>
+                                            <h3>گردش</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3200">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-man204"></i>
+                                            </div>
+                                            <h3>مهمانی</h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="skill-item le-animate" data-animation-in="bounceIn" data-delay="3400">
+                                            <div class="icon-holder">
+                                                <i class="flaticon-person58"></i>
+                                            </div>
+                                            <h3>مطالعه</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--    END OF Skills Section  -->
+            <!--    Portfolio Section  -->
+            <section id="portfolio" class="le-page hide-avatar">
+                <div class="container">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="right-box le-animate" data-animation-in="bounceRightIn" data-animation-out="bounceRightOut" data-delay="1500">
+                            <div class="le-title right">
+                                <span class="short-tags">
+                                    <span class="short-tag-medium">کارهای من</span>
+                                    <span class="short-tag-small">در مدت فعالیتم در این زمینه</span>
+                                </span>
+                                <h1>مقالات</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="carousel-holder le-animate" data-animation-in="showIn" data-animation-out="fadeOut">
+                            <div class="nav-buttons le-animate" data-animation-in="bounceUpIn" data-delay="1500">
+                                <a class="btn-prev" href="#prev">
+                                    <i class="flaticon-previous11"></i>
+                                </a>
+                                <a class="btn-next " href="#next">
+                                    <i class="flaticon-next15"></i>
+                                </a>
+                            </div>
+                            <div class="owl-carousel le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceDownOut" data-delay="1200">
+                                @foreach (var item in Model.AdminViewModel.Posts)
+                                {
+                                    <div class="carousel-item portfolio-item">
+                                        <div class="hover">
+                                            <div class="stuff col-md-offset-1 col-sm-offset-2">
+                                                <div class="category">@item.PostCategory.Category</div>
+                                                <h4>@item.Name</h4>
+                                                <span class="page-turner le-btn inverse small">@Html.ActionLink("ادامه مطلب . . .", "Details", "Posts", routeValues: new { Area = "Administrator", id = item.ID }, htmlAttributes: null)</span>
+                                            </div>
+                                        </div>
+                                        <img src="~/Uploads/@item.Image" alt="@item.Image" width="250" height="250">
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--    END OF Portfolio Section  -->
+            <!--    Contact Section  -->
+            <section id="contact" class="le-page show-avatar">
+                <div id="contact-hat" class="avatar le-animate" data-animation-in="bounceDownIn" data-animation-out="bounceUpOut" data-delay="1000">
+                    <img alt="hat-delivery" src="~/images/delivery-hat.png" />
+                </div>
+                <div id="contact-body" class="avatar le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceDownOut" data-delay="1000">
+                    <img alt="body-delivery" src="~/images/delivery.png" />
+                </div>
+                <div class="container">
+                    <div class="col-xs-12 col-md-5">
+                        <div class="left-box le-animate" data-animation-in="bounceLeftIn" data-animation-out="bounceLeftOut" data-delay="2000">
+                            <div class="le-title">
+                                <h1>ارتباط با من</h1>
+                                <span class="short-tags">
+                                    <span class="short-tag-small">پیغام خود را بفرستید</span>
+                                    <span class="short-tag-small">کاربرانی که پیام ارسال نموده اند</span>
+                                    @{foreach (var item in Model.NewsViewModel.Users)
+                                        {
+                                            <span class="short-tag-small">کاربر عزیز با نام کاربری :@item.Email</span>
+                                        }
+                                    }
+                                </span>
+                            </div>
+                            @using (Ajax.BeginForm("SendContact", "Home", new AjaxOptions { HttpMethod = "Post", Url = "/Home/SendContact" }))
+                            {
+                                <div class="left contact-box">
+                                    <h4>جهت ارتباط با من از فرم زیر استفاده کنید</h4>
+                                    <div class="contact-form-holder">
+                                        <div class="message-box"></div>
+                                        <div class="row">
+                                            <form id="contact-form" class="contact-form " method="post" dir="rtl">
+                                                <div class="col-xs-12">
+                                                    <div class="control-group">
+                                                        <div class="controls" dir="rtl">
+                                                            <div class="col-md-10">
+                                                                @Html.EditorFor(model => model.UserContact.Name, new { htmlAttributes = new { @class = "le-input  required col-xs-12" } })
+                                                                @Html.ValidationMessageFor(model => model.UserContact.Name, "", new { @class = "text-danger" })
+                                                            </div>
+                                                            @Html.LabelFor(model => model.UserContact.Name, htmlAttributes: new { @class = "control-label col-md-2 le-input" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="control-group">
+                                                        <div class="controls" dir="rtl">
+                                                            <div class="col-md-10">
+                                                                @Html.EditorFor(model => model.UserContact.Email, new { htmlAttributes = new { @class = "le-input  required col-xs-12" } })
+                                                                @Html.ValidationMessageFor(model => model.UserContact.Email, "", new { @class = "text-danger" })
+                                                            </div>
+                                                            @Html.LabelFor(model => model.UserContact.Email, htmlAttributes: new { @class = "control-label col-md-2 le-input" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12">
+                                                    <div class="control-group">
+                                                        <div class="controls" dir="rtl">
+                                                            <div class="col-md-10">
+                                                                @Html.EditorFor(model => model.UserContact.Subject, new { htmlAttributes = new { @class = "le-input  required col-xs-12" } })
+                                                                @Html.ValidationMessageFor(model => model.UserContact.Subject, "", new { @class = "text-danger" })
+                                                            </div>
+                                                            @Html.LabelFor(model => model.UserContact.Subject, htmlAttributes: new { @class = "control-label col-md-2 le-input" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12">
+                                                    <div class="control-group">
+                                                        <div class="controls" dir="rtl">
+                                                            <div class="col-md-10">
+                                                                @Html.TextAreaFor(model => model.UserContact.Message, new { htmlAttributes = new { @class = "le-input  required col-xs-12" } })
+                                                                @Html.ValidationMessageFor(model => model.UserContact.Message, "", new { @class = "text-danger" })
+                                                            </div>
+                                                            @Html.LabelFor(model => model.UserContact.Message, htmlAttributes: new { @class = "control-label col-md-2 le-input" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="form-group">
+                                                    <div class="button-holder">
+                                                      <br />
+                                                        <button class = "btn btn-danger">ارسال</button>
+                                                    </div>
+                                                    <div id="loading" class="pull-right">
+                                                        <img alt="" src="~/images/loader.gif" />
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-5 col-md-offset-2">
+                        <div class="right-box le-animate" data-animation-in="bounceRightIn" data-animation-out="bounceRightOut" data-delay="1500">
+                            <div class="right contact-box ">
+                                <div class="le-title right">
+                                    <span class="short-tags">
+                                        <span class="short-tag-medium">تماس من</span>
+                                        <span class="short-tag-small">با من در ارتباط باشید</span>
+                                    </span>
+                                    <h1>اطلاعات</h1>
+                                </div>
+                                <h4>جزئیات</h4>
+                                <div class="contact-info">
+                                    <ul>
+                                        <li>
+                                            <label>آدرس :</label> تهران، آپادانا<br>خیابان سهروردی شمالی
+                                        </li>
+                                        <li>
+                                            <label>ایمیل :</label> <a href="#">info@TOLOOCO.com</a>
+                                        </li>
+                                        <li>
+                                            <label>تلفن :</label>09127777777
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="social-icons small">
+                                    <ul>
+                                        <li>
+                                            <a class="fa fa-facebook" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="fa fa-twitter" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="fa fa-google-plus" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="fa fa-youtube" href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="fa fa-linkedin" href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--    END OF Contact Section  -->
+            <!--       Posts / Portfolio single pages-->
+
+            <section id="single-portfolio-01" class="le-page single-post hide-avatar">
+                <div class="container le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceUpOut">
+                    <div class="col-xs-12">
+                        <h1 class="title">عنوان مقاله</h1>
+                        <a class="page-turner close-page" href="#portfolio">
+                            <i class="flaticon-close47"></i>
+                        </a>
+                        <div class="post-container">
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="banner">
+                                    <a data-rel="prettyPhoto" href="~/images/portfolio/portfolio-banner-01.jpg">
+                                        <img src="~/images/portfolio/portfolio-banner-01.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>کارفرما</h2>
+                                    <p>
+                                        شرکت ایده پرداز عصر نوین
+                                    </p>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>توضیحات</h2>
+                                    <p>
+                                        مقاله فوق شامل طراحی و پیاده سازی وب سایت شرکت ایده پرداز عصر نوین می باشد که بنا به سفارش مدیریت آن مجموعه، با استفاده از آخرین تکنولوژی های روز و در مدت 15 روز کاری به اتمام رسید. <br>
+                                        در این مقاله همچنین از آخرین راهکارهای امنیتی استفاده شده و پیاده سازی سیستم اتوماسیون اداری نیز از دیگر بخش های این مقاله محسوب می شود.
+                                    </p>
+                                    <a class="le-btn">بازدید از سایت</a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="single-portfolio-02" class="le-page single-post hide-avatar">
+                <div class="container le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceUpOut">
+                    <div class="col-xs-12">
+                        <h1 class="title">عنوان مقاله</h1>
+                        <a class="page-turner close-page" href="#portfolio">
+                            <i class="flaticon-close47"></i>
+                        </a>
+                        <div class="post-container">
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="banner">
+                                    <a data-rel="prettyPhoto" href="~/images/portfolio/portfolio-banner-02.jpg">
+                                        <img src="~/images/portfolio/portfolio-banner-02.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>کارفرما</h2>
+                                    <p>
+                                        شرکت ایده پرداز عصر نوین
+                                    </p>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>توضیحات</h2>
+                                    <p>
+                                        مقاله فوق شامل طراحی و پیاده سازی وب سایت شرکت ایده پرداز عصر نوین می باشد که بنا به سفارش مدیریت آن مجموعه، با استفاده از آخرین تکنولوژی های روز و در مدت 15 روز کاری به اتمام رسید. <br>
+                                        در این مقاله همچنین از آخرین راهکارهای امنیتی استفاده شده و پیاده سازی سیستم اتوماسیون اداری نیز از دیگر بخش های این مقاله محسوب می شود.
+                                    </p>
+                                    <a class="le-btn">بازدید از سایت</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="single-portfolio-03" class="le-page single-post hide-avatar">
+                <div class="container le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceUpOut">
+                    <div class="col-xs-12">
+                        <h1 class="title">عنوان مقاله</h1>
+                        <a class="page-turner close-page" href="#portfolio">
+                            <i class="flaticon-close47"></i>
+                        </a>
+                        <div class="post-container">
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="banner">
+                                    <a data-rel="prettyPhoto" href="~/images/portfolio/portfolio-banner-03.jpg">
+                                        <img src="~/images/portfolio/portfolio-banner-03.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>کارفرما</h2>
+                                    <p>
+                                        شرکت ایده پرداز عصر نوین
+                                    </p>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>توضیحات</h2>
+                                    <p>
+                                        مقاله فوق شامل طراحی و پیاده سازی وب سایت شرکت ایده پرداز عصر نوین می باشد که بنا به سفارش مدیریت آن مجموعه، با استفاده از آخرین تکنولوژی های روز و در مدت 15 روز کاری به اتمام رسید. <br>
+                                        در این مقاله همچنین از آخرین راهکارهای امنیتی استفاده شده و پیاده سازی سیستم اتوماسیون اداری نیز از دیگر بخش های این مقاله محسوب می شود.
+                                    </p>
+                                    <a class="le-btn">بازدید از سایت</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="single-portfolio-04" class="le-page single-post hide-avatar">
+                <div class="container le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceUpOut">
+                    <div class="col-xs-12">
+                        <h1 class="title">عنوان مقاله</h1>
+                        <a class="page-turner close-page" href="#portfolio">
+                            <i class="flaticon-close47"></i>
+                        </a>
+                        <div class="post-container">
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="banner">
+                                    <a data-rel="prettyPhoto" href="~/images/portfolio/portfolio-banner-04.jpg">
+                                        <img src="~/images/portfolio/portfolio-banner-04.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>کارفرما</h2>
+                                    <p>
+                                        شرکت ایده پرداز عصر نوین
+                                    </p>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>توضیحات</h2>
+                                    <p>
+                                        مقاله فوق شامل طراحی و پیاده سازی وب سایت شرکت ایده پرداز عصر نوین می باشد که بنا به سفارش مدیریت آن مجموعه، با استفاده از آخرین تکنولوژی های روز و در مدت 15 روز کاری به اتمام رسید. <br>
+                                        در این مقاله همچنین از آخرین راهکارهای امنیتی استفاده شده و پیاده سازی سیستم اتوماسیون اداری نیز از دیگر بخش های این مقاله محسوب می شود.
+                                    </p>
+                                    <a class="le-btn">بازدید از سایت</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="single-portfolio-05" class="le-page single-post hide-avatar">
+                <div class="container le-animate" data-animation-in="bounceUpIn" data-animation-out="bounceUpOut">
+                    <div class="col-xs-12">
+                        <h1 class="title">عنوان مقاله</h1>
+                        <a class="page-turner close-page" href="#portfolio">
+                            <i class="flaticon-close47"></i>
+                        </a>
+                        <div class="post-container">
+                            <div class="nice-scroll" data-scroll-align="right">
+                                <div class="banner">
+                                    <a data-rel="prettyPhoto" href="~/images/portfolio/portfolio-banner-05.jpg">
+                                        <img src="~/images/portfolio/portfolio-banner-05.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>کارفرما</h2>
+                                    <p>
+                                        شرکت ایده پرداز عصر نوین
+                                    </p>
+                                </div>
+                                <div class="simple-text">
+                                    <h2>توضیحات</h2>
+                                    <p>
+                                        مقاله فوق شامل طراحی و پیاده سازی وب سایت شرکت ایده پرداز عصر نوین می باشد که بنا به سفارش مدیریت آن مجموعه، با استفاده از آخرین تکنولوژی های روز و در مدت 15 روز کاری به اتمام رسید. <br>
+                                        در این مقاله همچنین از آخرین راهکارهای امنیتی استفاده شده و پیاده سازی سیستم اتوماسیون اداری نیز از دیگر بخش های این مقاله محسوب می شود.
+                                    </p>
+                                    <a class="le-btn">بازدید از سایت</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <a class="goto-top" href="#gotop"></a>
+    <script src="~/Scripts/AjaxForm/jquery.form.min.js"></script>
+    <script src="~/js/jquery-1.11.1.min.js"></script>
+    <script src="~/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/css_browser_selector.js"></script>
+    <script type="text/javascript" src="~/js/jquery.easing-1.3.js"></script>
+    <script type="text/javascript" src="~/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/js/jquery.address-1.5.min.js"></script>
+    <script type="text/javascript" src="~/js/velocity.min.js"></script>
+    <script type="text/javascript" src="~/js/velocity.ui.js"></script>
+    <script type="text/javascript" src="~/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.nicescroll.min.js"></script>
+    <script type='application/javascript' src="~/js/fastclick.js"></script>
+    <script type="text/javascript" src="~/js/fontsmoothie.min.js"></script>
+    <script type="text/javascript" src="~/js/script.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $('#StyleSwitcher .switcher-btn').click(function () {
+
+                'use strict';
+
+                $('#StyleSwitcher').toggleClass('open');
+                return false;
+            });
+            $('.color-switch').click(function () {
+
+                'use strict';
+
+                var title = jQuery(this).attr('title');
+                jQuery('#color-switch').attr('href', '../css/colors/' + title + '.css');
+                return false;
+            });
+
+
+            jQuery('.switcher-colors a').click(function (e) {
+                jQuery('.switcher-colors a.active').removeClass('active');
+                $(this).addClass('active');
+                e.preventDefault();
+                var title = jQuery(this).attr('title');
+
+                chooseStyle(title, 60);
+            });
+        });
+   
+    </script>
+</body>
+
+</html>

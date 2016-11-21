@@ -1,0 +1,71 @@
+﻿@model MVC121.Areas.Administrator.ViewModels.NewsViewModels
+
+@{
+    ViewBag.Title = "ارسال خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2>خبرنامه </h2>
+
+@{ foreach (var item in Model.Users)
+    {
+        //ارسال رایانامه
+        MVC121.Helpers.Utilities.Email.SendNewsLetter
+            (item.Id, item.Email,Model.NewsLetter.NewsLetterCategory.Name,Model.NewsLetter.Name,Model.NewsLetter.FullBody);
+    }}
+
+<div>
+    <img src="~/Areas/Administrator/img/send_s.png" alt="category" />
+
+    <h4 style="font-family:IranNastaliq;font-size:xx-large">@Model.NewsLetter.Name <b style="color:green">با موفقیت ارسال شد!</b></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetter.NewsLetterCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetter.NewsLetterCategory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetter.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetter.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetter.Writer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetter.Writer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetter.FullBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetter.FullBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetter.PublishTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetter.PublishTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("بازگشت", "Index")
+</p>

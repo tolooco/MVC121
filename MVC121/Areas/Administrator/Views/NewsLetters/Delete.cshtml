@@ -1,0 +1,70 @@
+﻿@model MVC121.Areas.Administrator.Models.NewsLetter
+
+@{
+    ViewBag.Title = "حذف خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2 style="font-family:IranNastaliq;font-size:xx-large">حذف خبرنامه</h2>
+<h4 style="font-family:IranNastaliq;font-size:xx-large">@Model.Name</h4>
+
+<h3 style="font-family:IranNastaliq;font-size:xx-large">آیا از حذف این مطلب اطمینان دارید ؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal" >
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsLetterCategory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsLetterCategory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Writer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Writer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullBody)
+        </dt>
+
+        @{string strFullBody = Model.FullBody; }
+        <dd style="font-family:IranNastaliq;font-size:xx-large">
+            <textarea> @HtmlRemoval.UnHtml(strFullBody)</textarea>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("بازگشت", "Index")
+        </div>
+    }
+</div>

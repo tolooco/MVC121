@@ -1,0 +1,91 @@
+﻿@model MVC121.Models.BaseSalary
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BaseSalary</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Year.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalaryDaily)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalaryDaily)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NavSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NavSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BonSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BonSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EzafehTimeSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EzafehTimeSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KasrGheibat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KasrGheibat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

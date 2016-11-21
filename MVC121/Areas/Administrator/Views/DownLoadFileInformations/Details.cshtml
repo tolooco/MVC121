@@ -1,0 +1,61 @@
+﻿@model MVC121.Areas.Administrator.Models.DownLoadFileInformation
+
+@{
+    ViewBag.Title = "جزئیات فایل";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<img src="~/Areas/Administrator/img/download_s.png" alt="category" />
+<hr />
+
+<h2>جزئیات</h2>
+
+<div>
+    <h4>@Model.FilePathName</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePathName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilePathName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsVIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsVIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPaymentUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPaymentUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceFile)
+        </dd>
+        <dt>
+            @Html.Label("حجم فایل به کیلو بایت")
+        </dt>
+
+        <dd>
+            @ViewBag.Length
+        </dd>
+       
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش اطلاعات فایل", "Edit", new { id = Model.FileID }) |
+    @Html.ActionLink("بازگشت به صفحه مدیریت فایل ها", "Index")
+</p>

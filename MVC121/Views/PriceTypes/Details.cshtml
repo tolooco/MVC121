@@ -1,0 +1,147 @@
+﻿@model MVC121.Models.PriceType
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PriceType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerType.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerType.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Factory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Factory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TakhfifKharid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TakhfifKharid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eshantion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eshantion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marjin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marjin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Promotion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promotion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tablighat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tablighat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rebate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rebate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TakhfifForosh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TakhfifForosh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArzeshAfzodeh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArzeshAfzodeh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDateLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDateLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDateLicence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDateLicence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDatePro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDatePro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDatePro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDatePro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

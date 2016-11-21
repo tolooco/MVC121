@@ -1,0 +1,60 @@
+﻿@model MVC121.Areas.Administrator.Models.DownLoadFileInformation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<img src="~/Areas/Administrator/img/download_s.png" alt="category" />
+
+
+<h2>حذف فایل از بانک اطلاعات</h2>
+
+<h4>@Model.FilePathName</h4>
+
+<h3>آیا از حذف این مطلب اطمینان دارید ؟</h3><div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePathName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilePathName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsVIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsVIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPaymentUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPaymentUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceFile)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف فایل" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به صفحه مدیریت فایل ها", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,71 @@
+﻿@model MVC121.Areas.Administrator.Models.Comment
+
+@{
+    ViewBag.Title = "جزئیات دیدگاه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+<img src="~/Areas/Administrator/img/comment_s.png" alt="category" />
+
+<h2>جزئیات دیدگاه</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Post.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        @{string strComments = Model.Comments; }
+        <dd style="font-family:IranNastaliq;font-size:xx-large">
+            <textarea> @HtmlRemoval.UnHtml(strComments)</textarea>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش دیدگاه", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("بازگشت به صفحه مدیریت دیدگاه", "Index")
+</p>

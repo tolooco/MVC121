@@ -1,0 +1,77 @@
+﻿@model MVC121.Areas.Administrator.Models.Comment
+
+@{
+    ViewBag.Title = "حذف دیدگاه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+<img src="~/Areas/Administrator/img/recycle_bin.png" alt="category" />
+
+<h2>حذف دیدگاه</h2>
+<h4>@Model.Name</h4>
+
+<h3>آیا از حذف این دیدگاه اطمینان دارید ؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Post.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        @{string strComments = Model.Comments; }
+        <dd style="font-family:IranNastaliq;font-size:xx-large">
+            <textarea> @HtmlRemoval.UnHtml(strComments)</textarea>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishTime)
+        </dd>
+
+    </dl>
+    <br />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به صفحه مدیریت دیدگاه", "Index")
+        </div>
+    }
+</div>

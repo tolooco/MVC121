@@ -1,0 +1,35 @@
+﻿@model MVC121.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "حذف";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+
+}
+<img src="~/Areas/Administrator/img/admin_s.png" alt="admin" />
+
+
+<h2>حذف نقش</h2>
+
+<h3>آیا از حذف این آیتم اطمینان دارید</h3>
+<div>
+    <h4>کاربر</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("شناسه کاربری")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت", "Index")
+        </div>
+    }
+</div>

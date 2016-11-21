@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVC121.Areas.Administrator.Models.NewsLetterCategory>
+
+@{
+    ViewBag.Title = "مدیریت دسته بندی خبرنامه";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<img src="~/Areas/Administrator/img/newsletter_s.png" alt="category" />
+
+<h2 style="font-family:IranNastaliq;font-size:xx-large">مدیریت دسته بندی خبرنامه</h2>
+
+<p style="font-family:IranNastaliq;font-size:xx-large">
+    @Html.ActionLink("ایجاد دسته بندی جدید", "Create")
+</p>
+<table class="table">
+    <tr style="font-family:IranNastaliq;font-size:xx-large">
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="font-family:IranNastaliq;font-size:xx-large">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("جزئیات", "Details", new { id = item.ID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("ویرایش", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

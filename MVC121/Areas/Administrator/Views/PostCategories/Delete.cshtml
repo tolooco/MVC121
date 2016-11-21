@@ -1,0 +1,36 @@
+﻿@model MVC121.Areas.Administrator.Models.PostCategory
+
+@{
+    ViewBag.Title = "حذف دسته بندی";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<hr />
+
+<img src="~/Areas/Administrator/img/recycle_bin.png" alt="category" />
+
+<h2>حذف دسته بندی</h2>
+<h4>@Model.Category</h4>
+
+<h3>آیا از حذف این آیتم اطمینان دارید؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به صفحه مدیریت دسته بندیها", "Index")
+        </div>
+    }
+</div>

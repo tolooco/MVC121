@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVC121.Areas.Administrator.Models.Post>
+
+@{
+    ViewBag.Title = "مدیریت اشعار";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<img src="~/Areas/Administrator/img/writing_s.png" alt="category" />
+
+<h2>صفحه مدیریت اشعار</h2>
+
+<p>
+    @Html.ActionLink("نگاشت شعر جدید", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoetryWriter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SmallBody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoetryWriter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmallBody)
+            </td>
+            <td>
+                <img src="~/Uploads/@item.Image" width="121" height="121" />
+            </td>
+            <td>
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("جزئیات", "Details", new { id = item.ID }) |
+                @Html.ActionLink("حذف", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+
+    }
+
+</table>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("صفحه بعدی", "btnNext") |
+        @Html.ActionLink("صفحه قبلی", "btnPer") 
+
+    </div>
+</div>
+

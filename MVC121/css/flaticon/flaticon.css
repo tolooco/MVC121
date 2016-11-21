@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-android2:before {
+	content: "\e000";
+}
+.flaticon-blogger4:before {
+	content: "\e001";
+}
+.flaticon-close47:before {
+	content: "\e002";
+}
+.flaticon-cog1:before {
+	content: "\e003";
+}
+.flaticon-cogs2:before {
+	content: "\e004";
+}
+.flaticon-css1:before {
+	content: "\e005";
+}
+.flaticon-dog65:before {
+	content: "\e006";
+}
+.flaticon-domain1:before {
+	content: "\e007";
+}
+.flaticon-erlenmeyer:before {
+	content: "\e008";
+}
+.flaticon-guitar1:before {
+	content: "\e009";
+}
+.flaticon-happy50:before {
+	content: "\e00a";
+}
+.flaticon-html2:before {
+	content: "\e00b";
+}
+.flaticon-html3:before {
+	content: "\e00c";
+}
+.flaticon-joomla1:before {
+	content: "\e00d";
+}
+.flaticon-man204:before {
+	content: "\e00e";
+}
+.flaticon-man271:before {
+	content: "\e00f";
+}
+.flaticon-man421:before {
+	content: "\e010";
+}
+.flaticon-man423:before {
+	content: "\e011";
+}
+.flaticon-next15:before {
+	content: "\e012";
+}
+.flaticon-person128:before {
+	content: "\e013";
+}
+.flaticon-person58:before {
+	content: "\e014";
+}
+.flaticon-person87:before {
+	content: "\e015";
+}
+.flaticon-previous11:before {
+	content: "\e016";
+}
+.flaticon-right57:before {
+	content: "\e017";
+}
+.flaticon-seo1:before {
+	content: "\e018";
+}
+.flaticon-striped7:before {
+	content: "\e019";
+}
+.flaticon-swimmer8:before {
+	content: "\e01a";
+}
+.flaticon-viral:before {
+	content: "\e01b";
+}
+.flaticon-website8:before {
+	content: "\e01c";
+}
+.flaticon-wordpress8:before {
+	content: "\e01d";
+}

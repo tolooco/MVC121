@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MVC121.Areas.Administrator.Models.DownLoadFileInformation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<img src="~/Areas/Administrator/img/download_s.png" alt="category" />
+<hr />
+
+<h2 style="font-family:IranNastaliq;font-size:xx-large">مرکز آپلود و دانلود وبسایت </h2>
+<hr />
+
+<p style="font-family:IranNastaliq;font-size:x-large">
+    @Html.ActionLink("آپلود فایل جدید", "Create")
+</p>
+<hr />
+<table >
+    <tr >
+        <th>
+            @Html.DisplayNameFor(model => model.FilePathName)
+        </th>
+        <th>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayNameFor(model => model.IsVIP)
+        </th>
+        <th>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayNameFor(model => model.IsPaymentUser)
+        </th>
+        <th>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayNameFor(model => model.PriceFile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr >
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePathName)
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayFor(modelItem => item.IsVIP)
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayFor(modelItem => item.IsPaymentUser)
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;
+            @Html.DisplayFor(modelItem => item.PriceFile)
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("دانلود فایل", "Download", new { id = item.FileID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("ویرایش", "Edit", new { id = item.FileID }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("جزئیات", "Details", new { id = item.FileID }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.FileID }, new { @class = "btn btn-danger" })
+            
+        </td>
+    </tr>
+}
+
+</table>

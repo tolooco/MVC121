@@ -1,0 +1,163 @@
+﻿@model MVC121.Models.Salary
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Salary</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalry.LevelPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalry.LevelPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mount.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mount.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personel.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personel.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EzafehKar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EzafehKar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActiveWorkDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActiveWorkDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiftSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiftSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RewardSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RewardSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Porsant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porsant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HelpSalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HelpSalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PenaltySalary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltySalary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaftehPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaftehPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaftehBedehi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaftehBedehi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bedehi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bedehi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PBon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PBon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

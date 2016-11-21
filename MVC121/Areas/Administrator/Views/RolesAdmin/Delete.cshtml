@@ -1,0 +1,36 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+
+}
+
+<img src="~/Areas/Administrator/img/admin_s.png" alt="admin" />
+
+
+<h2>حذف</h2>
+
+<h3>آیا از حذف این آیتم اطمینان دارید </h3>
+<p>حذف نقش باعث حذف این سطح دسترسی برای تمامی کاربرانی که این نقش را احراز نموده اند میگردد.</p>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           @Html.Label("سطح دسترسی")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("بازگشت", "Index")
+        </div>
+    }
+</div>
